@@ -1,42 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internship Application Form</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Internship Application Form</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <form class="form-container">
-        <label for="first-name-input">First Name:</label>
-        <input type="text" id="first-name-input" name="first-name" required>
+  <form class="form-container">
+    <!-- First Name -->
+    <label for="first-name-input" class="form-label">First Name</label>
+    <input
+      type="text"
+      id="first-name-input"
+      name="first-name"
+      class="form-control"
+      required
+    />
+    <div class="invalid-feedback">This field is required.</div>
 
-        <label for="last-name-input">Last Name:</label>
-        <input type="text" id="last-name-input" name="last-name" required>
+    <!-- Last Name -->
+    <label for="last-name-input" class="form-label">Last Name</label>
+    <input
+      type="text"
+      id="last-name-input"
+      name="last-name"
+      class="form-control"
+      required
+    />
+    <div class="invalid-feedback">This field is required.</div>
 
-        <label for="email-input">Email:</label>
-        <input type="email" id="email-input" name="email" required>
+    <!-- Email Address -->
+    <label for="email-input" class="form-label">Email Address</label>
+    <input
+      type="email"
+      id="email-input"
+      name="email"
+      class="form-control"
+      required
+    />
+    <div class="invalid-feedback">This field is required.</div>
 
-        <label for="college-input">College Name:</label>
-        <input type="text" id="college-input" name="college" required>
+    <!-- College -->
+    <label for="college-input" class="form-label">College</label>
+    <input
+      type="text"
+      id="college-input"
+      name="college"
+      class="form-control"
+      required
+    />
+    <div class="invalid-feedback">This field is required.</div>
 
-        <label for="roll-no-input">Roll No:</label>
-        <input type="text" id="roll-no-input" name="roll-no" required>
+    <!-- Roll No. -->
+    <label for="roll-no-input" class="form-label">Roll No.</label>
+    <input
+      type="text"
+      id="roll-no-input"
+      name="roll-no"
+      class="form-control"
+      required
+    />
+    <div class="invalid-feedback">This field is required.</div>
 
-        <label for="graduation-year">Graduation Year:</label>
-        <select id="graduation-year" name="graduation-year" required>
-            <option value="2020">2020</option>
-            <option value="2021">2021</option>
-            <option value="2022">2022</option>
-            <option value="2023">2023</option>
-        </select>
+    <!-- Graduation Year -->
+    <label for="grad-year-select" class="form-label">Graduation Year</label>
+    <select
+      id="grad-year-select"
+      name="graduation-year"
+      class="form-select"
+      required
+    >
+      <option value="2020">2020</option>
+      <option value="2021">2021</option>
+      <option value="2022">2022</option>
+      <option value="2023">2023</option>
+    </select>
+    <div class="invalid-feedback">This field is required.</div>
 
-        <label for="conditions-checkbox" class="checkbox-label">
-            <input type="checkbox" id="conditions-checkbox" name="conditions" required>
-            I agree to the terms and conditions
-        </label>
+    <!-- Checkbox for Conditions -->
+    <div class="form-check mt-3">
+      <input
+        type="checkbox"
+        id="conditions-checkbox"
+        name="conditions"
+        class="form-check-input"
+        required
+      />
+      <label for="conditions-checkbox" class="form-check-label">
+        Agree to terms and conditions
+      </label>
+      <div class="invalid-feedback">You must agree before submitting.</div>
+    </div>
 
-        <button type="submit">Submit</button>
-    </form>
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+  </form>
 </body>
 </html>
